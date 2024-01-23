@@ -15,6 +15,7 @@ import About from "../Components/About/About";
 import ServiceList from "../Components/Services/ServiceList";
 import DoctorList from "../Components/Doctors/DoctorList";
 import FaqList from "../Components/Faqs/FaqList";
+import Testimonial from "../Components/Testimonial/Testimonial";
 
 function Home() {
   return (
@@ -283,6 +284,21 @@ function Home() {
         </div>
       </section>
       {/* =============== End FAQ section ================  */}
+
+      {/* =============== Testimonial section ================  */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center ">What our patients say </h2>
+            <p className="text__para text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Excepturi, adipisci.
+            </p>
+          </div>
+          <Testimonial/>
+        </div>
+      </section>
+      {/* =============== End Testimonial section ================  */}
     </>
   );
 }
