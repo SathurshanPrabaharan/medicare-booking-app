@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../Components/About/About";
 import ServiceList from "../Components/Services/ServiceList";
+import DoctorList from "../Components/Doctors/DoctorList";
 
 function Home() {
   return (
@@ -237,7 +238,9 @@ function Home() {
 
                 <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[18px]">
                   <img src={avatarIcon} alt="" />
-                  <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor">Wayne Collins</h4>
+                  <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor">
+                    Wayne Collins
+                  </h4>
                 </div>
               </div>
             </div>
@@ -245,6 +248,21 @@ function Home() {
         </div>
       </section>
       {/* =============== End Services Section ================  */}
+
+      {/* =============== Our great doctors ================  */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center ">Our Great Doctors </h2>
+            <p className="text__para text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Excepturi, adipisci.
+            </p>
+          </div>
+          <DoctorList/>
+        </div>
+      </section>
+      {/* =============== End Our great doctors ================  */}
     </>
   );
 }
