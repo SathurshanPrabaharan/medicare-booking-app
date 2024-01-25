@@ -38,7 +38,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="mt-5">
+          <div className="mt-7">
             <button className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3">Login</button>
           </div>
 
