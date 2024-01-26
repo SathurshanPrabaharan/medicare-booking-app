@@ -18,7 +18,7 @@ export const authenticate = async (req, res, next) => {
 
     //verify token
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
-    req.id = decoded.id;
+    req.userId = decoded.id;
     req.role = decoded.role;
     next();
   } catch (error) {
@@ -31,7 +31,7 @@ export const authenticate = async (req, res, next) => {
 };
 
 export const restrict = (roles) => async (req, res, next) => {
-  const userId = req.id;
+  const userId = req.userId;
 
   let user;
 
