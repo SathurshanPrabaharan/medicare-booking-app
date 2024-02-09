@@ -9,6 +9,9 @@ import Services from '../Pages/Services'
 import Signup from '../Pages/Signup'
 import Doctors from '../Pages/Doctors/Doctors'
 import DoctorDetails from '../Pages/Doctors/DoctorDetails'
+import MyAccount from '../Dashboard/user-account/MyAccount'
+import Dashboard from '../Dashboard/doctor-account/Dashboard'
+import ProtectedRoute from './ProtectedRoute'
 
 function Routers() {
   return (
@@ -22,6 +25,8 @@ function Routers() {
       <Route path='/register' element={<Signup/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/services' element={<Services/>}/>
+      <Route path='/users/profile/me' element={<ProtectedRoute allowedRole={['patient']}> <MyAccount/></ProtectedRoute>}/>
+      <Route path='/doctors/profile/me' element={<ProtectedRoute allowedRole={['doctor']}> <Dashboard/></ProtectedRoute>}/>
     </Routes>
     </>
   )
