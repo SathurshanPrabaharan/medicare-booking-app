@@ -1,23 +1,18 @@
 import React from "react";
 import { formateDate } from "../../utils/formateDate";
 
-const DoctorAbout = () => {
+const DoctorAbout = ({name,about,qualification,experience}) => {
   return (
     <>
       <div>
         <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold flex items-center gap-2">
           About of
           <span className="text-[24px] text-irisBlueColor font-bold leading-9">
-            Kamal Vimalesh
+            {name}
           </span>
         </h3>
         <p className="text__para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quasi
-          id dolorem ab, asperiores fugit labore laboriosam! Praesentium
-          distinctio molestias officia vero consectetur veniam aperiam! Quae
-          amet debitis est eaque. Aut saepe possimus repellat voluptatem
-          blanditiis, eaque non assumenda unde sequi laudantium et dignissimos
-          nostrum sed, in magni ut commodi!
+          {about}
         </p>
       </div>
 
