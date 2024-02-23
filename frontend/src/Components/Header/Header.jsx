@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
 import logo from "../../assets/images/logo.png";
-import userImg from "../../assets/images/avatar-icon.png";
+import userImg from "../../assets/images/avatar.png";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { AuthContext } from "../../Context/authContext";
@@ -86,7 +86,8 @@ function Header() {
                 <Link to={`${role==='doctor'?'/doctors/profile/me':'users/profile/me'}`}>
                   <figure className="w-[35px] h-[35px] rouned-full">
                     <img
-                      src={user.photo}
+                      src={user.photo?user.photo:userImg}
+                      // src={user.photo}
                       className="w-full rounded-full"
                       alt=""
                     />

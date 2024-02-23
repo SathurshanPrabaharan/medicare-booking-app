@@ -28,7 +28,7 @@ const Tabs = ({ tab, setTab }) => {
           Overview
         </button>
         <button
-          onClick={()=>setTab("appoinments")}
+          onClick={()=>setTab("appointments")}
           className={`${
             tab === "appoinments"
               ? "bg-indigo-100 text-primaryColor"
